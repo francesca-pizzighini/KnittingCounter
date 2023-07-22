@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background: rgb(152, 152, 152);
+  background: linear-gradient(0deg, rgb(152, 152, 152) 0%, rgb(0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#989898",endColorstr="#000000",GradientType=1);
+}
+
 .background-gradient {
   height: 100dvh;
 }
