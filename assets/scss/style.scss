@@ -12,7 +12,6 @@ body{
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(233,146,165,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e992a5",GradientType=1); 
     margin-top: 30px;
-}
 
 // color changer
 .background-gradient{
@@ -61,6 +60,11 @@ body{
     background: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(233,146,165,1) 100%);
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(233,146,165,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e992a5",GradientType=1); 
+    // background: rgb(248,186,186);
+    // background: -moz-linear-gradient(0deg, rgba(248,186,186,1) 0%, rgba(255,119,119,1) 100%);
+    // background: -webkit-linear-gradient(0deg, rgba(248,186,186,1) 0%, rgba(255,119,119,1) 100%);
+    // background: linear-gradient(0deg, rgba(248,186,186,1) 0%, rgba(255,119,119,1) 100%);
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f8baba",endColorstr="#ff7777",GradientType=1); 
 }
 .lavender{
     background: rgb(255,255,255);
@@ -105,7 +109,62 @@ body{
     }
     span{
         font-size: 60px;
+        line-height: 60px;
     }
+    
+    .counter-btns{
+        // background-color: aqua;
+        width: 200px;
+        height: 120px;
+        position: relative;
+
+        .reset, .minus, .plus{
+            border-radius: 100%;
+            border: 1px solid white;
+            color: white;
+        }
+        .reset{
+            font-size: 14px;
+            height: 30px;
+            width: 30px;
+            // background-color: grey;
+            position: absolute;
+            left: 60px;
+            top:10px
+        }
+        .minus{
+            font-size: 40px;
+            height: 60px;
+            width: 60px;
+            // background-color: red;
+            position: absolute;
+            bottom:10px;
+            left:10px;
+        }
+        .plus{
+            font-size: 50px;
+            height: 100px;
+            width: 100px;
+            // background-color: blue;
+            position: absolute;
+            bottom: 0px;
+            right:0px
+        }
+        .reset:hover, .plus:hover, .minus:hover{
+            background-color: white;
+            color: rgba(233,146,165,1);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
     .btn-increase, .btn-one{
         margin-left: 20px;
     }
@@ -117,7 +176,10 @@ body{
     .btn-half, .btn-one{
         margin-bottom: 15px;
         font-size: 15px;
-        padding: 5px 10px
+        padding: 5px 10px;
+    }
+    .btn-half:hover, .btn-one:hover{
+        color: rgba(233,146,165,1);
     }
     .btn-half:focus, .btn-one:focus{
         background-color: white;

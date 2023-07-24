@@ -10,10 +10,11 @@ body {
   background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(233, 146, 165) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e992a5",GradientType=1);
   margin-top: 30px;
+  overflow: auto;
 }
 
 .background-gradient {
-  height: 100dvh;
+  height: 120dvh;
 }
 
 .color-picker {
@@ -92,6 +93,45 @@ body {
 }
 .row-counter span, .stitch-counter span {
   font-size: 60px;
+  line-height: 60px;
+}
+.row-counter .counter-btns, .stitch-counter .counter-btns {
+  width: 200px;
+  height: 120px;
+  position: relative;
+}
+.row-counter .counter-btns .reset, .row-counter .counter-btns .minus, .row-counter .counter-btns .plus, .stitch-counter .counter-btns .reset, .stitch-counter .counter-btns .minus, .stitch-counter .counter-btns .plus {
+  border-radius: 100%;
+  border: 1px solid white;
+  color: white;
+}
+.row-counter .counter-btns .reset, .stitch-counter .counter-btns .reset {
+  font-size: 14px;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 60px;
+  top: 10px;
+}
+.row-counter .counter-btns .minus, .stitch-counter .counter-btns .minus {
+  font-size: 40px;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.row-counter .counter-btns .plus, .stitch-counter .counter-btns .plus {
+  font-size: 50px;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.row-counter .counter-btns .reset:hover, .row-counter .counter-btns .plus:hover, .row-counter .counter-btns .minus:hover, .stitch-counter .counter-btns .reset:hover, .stitch-counter .counter-btns .plus:hover, .stitch-counter .counter-btns .minus:hover {
+  background-color: white;
+  color: rgb(233, 146, 165);
 }
 .row-counter .btn-increase, .row-counter .btn-one, .stitch-counter .btn-increase, .stitch-counter .btn-one {
   margin-left: 20px;
@@ -103,6 +143,9 @@ body {
   margin-bottom: 15px;
   font-size: 15px;
   padding: 5px 10px;
+}
+.row-counter .btn-half:hover, .row-counter .btn-one:hover, .stitch-counter .btn-half:hover, .stitch-counter .btn-one:hover {
+  color: rgb(233, 146, 165);
 }
 .row-counter .btn-half:focus, .row-counter .btn-one:focus, .stitch-counter .btn-half:focus, .stitch-counter .btn-one:focus {
   background-color: white;
