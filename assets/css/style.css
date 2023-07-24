@@ -12,7 +12,8 @@ body {
 }
 
 .background-gradient {
-  height: 100dvh;
+  height: 100%;
+  overflow: hidden;
 }
 
 .color-picker {
@@ -81,7 +82,7 @@ body {
 }
 
 .row-counter, .stitch-counter {
-  margin: 30px 0;
+  padding: 30px 0;
   width: -moz-fit-content;
   width: fit-content;
   color: #494850;
@@ -104,6 +105,14 @@ body {
   color: white;
 }
 .row-counter .counter-btns .reset:hover, .row-counter .counter-btns .plus:hover, .row-counter .counter-btns .minus:hover, .stitch-counter .counter-btns .reset:hover, .stitch-counter .counter-btns .plus:hover, .stitch-counter .counter-btns .minus:hover {
+  background-color: white;
+  color: #494850;
+}
+.row-counter .counter-btns .reset:focus, .row-counter .counter-btns .plus:focus, .row-counter .counter-btns .minus:focus, .stitch-counter .counter-btns .reset:focus, .stitch-counter .counter-btns .plus:focus, .stitch-counter .counter-btns .minus:focus {
+  background-color: white;
+  color: #494850;
+}
+.row-counter .counter-btns .reset:active, .row-counter .counter-btns .plus:active, .row-counter .counter-btns .minus:active, .stitch-counter .counter-btns .reset:active, .stitch-counter .counter-btns .plus:active, .stitch-counter .counter-btns .minus:active {
   background-color: white;
   color: #494850;
 }
@@ -141,4 +150,8 @@ body {
 }
 .row-counter .btn-half:hover, .row-counter .btn-one:hover, .stitch-counter .btn-half:hover, .stitch-counter .btn-one:hover {
   color: #494850;
+}
+
+.space {
+  height: 600px;
 }
