@@ -8,6 +8,7 @@ body {
   background: rgb(152, 152, 152);
   background: linear-gradient(0deg, rgb(152, 152, 152) 0%, rgb(0, 0, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#989898",endColorstr="#000000",GradientType=1);
+  margin-top: 30px;
 }
 
 .background-gradient {
@@ -77,4 +78,31 @@ body {
   background: rgb(254, 230, 213);
   background: linear-gradient(0deg, rgb(254, 230, 213) 0%, rgb(249, 105, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fee6d5",endColorstr="#f96900",GradientType=1);
+}
+
+.row-counter, .stitch-counter {
+  margin: 30px 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.row-counter h1, .stitch-counter h1 {
+  font-size: 30px;
+}
+.row-counter span, .stitch-counter span {
+  font-size: 20px;
+}
+.row-counter .btn-increase, .row-counter .btn-one, .stitch-counter .btn-increase, .stitch-counter .btn-one {
+  margin-left: 20px;
+}
+.row-counter .btn-increase, .row-counter .btn-decrease, .stitch-counter .btn-increase, .stitch-counter .btn-decrease {
+  border-radius: 100%;
+}
+.row-counter .btn-half, .row-counter .btn-one, .stitch-counter .btn-half, .stitch-counter .btn-one {
+  margin-bottom: 15px;
+}
+.row-counter .btn-reset, .stitch-counter .btn-reset {
+  margin-top: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 15px;
 }

@@ -10,6 +10,7 @@ body{
     background: -webkit-linear-gradient(0deg, rgba(152,152,152,1) 0%, rgba(0,0,0,1) 100%);
     background: linear-gradient(0deg, rgba(152,152,152,1) 0%, rgba(0,0,0,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#989898",endColorstr="#000000",GradientType=1); 
+    margin-top: 30px;
 }
 
 // color changer
@@ -93,6 +94,42 @@ body{
 
 
 
+
+//row counter
+.row-counter, .stitch-counter{
+    margin: 30px 0;
+    width: fit-content;
+
+    h1{
+        font-size: 30px;
+    }
+    span{
+        font-size: 20px;
+    }
+    .btn-increase, .btn-one{
+        margin-left: 20px;
+    }
+
+    .btn-increase, .btn-decrease{
+        border-radius: 100%;
+    }
+    // .btn-increase{
+    //     font-size: 40px;
+    // }
+    // .btn-decrease{
+    //     font-size: 15px;
+    //     padding:5px;
+    // }
+
+    .btn-half, .btn-one{
+        margin-bottom: 15px;
+    }
+    .btn-reset{
+        margin-top: 10px;
+        width: fit-content;
+        padding: 5px 15px;
+    }
+}
 
 
 
