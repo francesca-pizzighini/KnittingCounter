@@ -5,9 +5,9 @@
 }
 
 body {
-  background: rgb(152, 152, 152);
-  background: linear-gradient(0deg, rgb(152, 152, 152) 0%, rgb(0, 0, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#989898",endColorstr="#000000",GradientType=1);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(233, 146, 165) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e992a5",GradientType=1);
   margin-top: 30px;
 }
 
@@ -32,58 +32,59 @@ body {
   border: 3px solid white;
 }
 
-.blue {
-  background: rgb(0, 252, 255);
-  background: linear-gradient(0deg, rgb(0, 252, 255) 0%, rgb(9, 104, 121) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00fcff",endColorstr="#096879",GradientType=1);
+.beige {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(215, 137, 50) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#d78932",GradientType=1);
 }
 
-.green {
-  background: rgb(215, 255, 155);
-  background: linear-gradient(0deg, rgb(215, 255, 155) 0%, rgb(36, 194, 44) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d7ff9b",endColorstr="#24c22c",GradientType=1);
+.orange {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(248, 116, 20) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#f87414",GradientType=1);
+}
+
+.red {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(233, 69, 25) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e94519",GradientType=1);
 }
 
 .pink {
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(251, 155, 255) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#fb9bff",GradientType=1);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(233, 146, 165) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#e992a5",GradientType=1);
 }
 
-.black {
-  background: rgb(152, 152, 152);
-  background: linear-gradient(0deg, rgb(152, 152, 152) 0%, rgb(0, 0, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#989898",endColorstr="#000000",GradientType=1);
-}
-
-.white {
-  background: rgb(205, 205, 205);
-  background: linear-gradient(0deg, rgb(205, 205, 205) 0%, rgb(255, 255, 255) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cdcdcd",endColorstr="#ffffff",GradientType=1);
-}
-
-.beige {
-  background: rgb(139, 69, 0);
-  background: linear-gradient(0deg, rgb(139, 69, 0) 0%, rgb(232, 194, 116) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8b4500",endColorstr="#e8c274",GradientType=1);
-}
-
-.purple {
+.lavender {
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(157, 94, 255) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#9d5eff",GradientType=1);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(199, 133, 233) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#c785e9",GradientType=1);
 }
 
-.orange {
-  background: rgb(254, 230, 213);
-  background: linear-gradient(0deg, rgb(254, 230, 213) 0%, rgb(249, 105, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fee6d5",endColorstr="#f96900",GradientType=1);
+.blue {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(5, 153, 156) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#05999c",GradientType=1);
+}
+
+.green {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(24, 166, 14) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#18a60e",GradientType=1);
+}
+
+.grey {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(95, 96, 90) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#5f605a",GradientType=1);
 }
 
 .row-counter, .stitch-counter {
   margin: 30px 0;
   width: -moz-fit-content;
   width: fit-content;
+  color: black;
 }
 .row-counter h1, .stitch-counter h1 {
   font-size: 30px;
@@ -95,7 +96,7 @@ body {
   margin-left: 20px;
 }
 .row-counter .btn-increase, .row-counter .btn-decrease, .stitch-counter .btn-increase, .stitch-counter .btn-decrease {
-  border-radius: 100%;
+  border-radius: 40%;
 }
 .row-counter .btn-half, .row-counter .btn-one, .stitch-counter .btn-half, .stitch-counter .btn-one {
   margin-bottom: 15px;

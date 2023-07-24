@@ -1,25 +1,23 @@
+let beige = document.querySelector('.beige');
+let orange = document.querySelector('.orange');
+let red = document.querySelector('.red');
+let pink = document.querySelector('.pink');
+let lavender = document.querySelector('.lavender');
 let blue = document.querySelector('.blue')
 let green = document.querySelector('.green')
-let pink = document.querySelector('.pink');
-let black = document.querySelector('.black');
-let white = document.querySelector('.white');
-let beige = document.querySelector('.beige');
-let purple = document.querySelector('.purple');
-let orange = document.querySelector('.orange');
-
-
+let grey = document.querySelector('.grey');
 
 
 
 let colors = [
-    [blue, 'blue'], 
-    [green, 'green'], 
+    [beige, 'beige'], 
+    [orange, 'orange'], 
+    [red, 'red'],
     [pink, 'pink'],
-    [black, 'black'],
-    [white, 'white'],
-    [beige, 'beige'],
-    [purple, 'purple'],
-    [orange, 'orange'],
+    [lavender, 'lavender'],
+    [blue, 'blue'],
+    [green, 'green'],
+    [grey, 'grey'],
 ];
 
 colors.forEach(origin=>{
