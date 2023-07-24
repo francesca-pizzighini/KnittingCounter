@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
 }
 
 body {
@@ -90,7 +91,7 @@ body {
   font-size: 30px;
 }
 .row-counter span, .stitch-counter span {
-  font-size: 20px;
+  font-size: 60px;
 }
 .row-counter .btn-increase, .row-counter .btn-one, .stitch-counter .btn-increase, .stitch-counter .btn-one {
   margin-left: 20px;
@@ -100,6 +101,12 @@ body {
 }
 .row-counter .btn-half, .row-counter .btn-one, .stitch-counter .btn-half, .stitch-counter .btn-one {
   margin-bottom: 15px;
+  font-size: 15px;
+  padding: 5px 10px;
+}
+.row-counter .btn-half:focus, .row-counter .btn-one:focus, .stitch-counter .btn-half:focus, .stitch-counter .btn-one:focus {
+  background-color: white;
+  color: black;
 }
 .row-counter .btn-reset, .stitch-counter .btn-reset {
   margin-top: 10px;
