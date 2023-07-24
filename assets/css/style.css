@@ -58,7 +58,7 @@ body {
 
 .lavender {
   background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(230, 227, 237) 0%, rgb(156, 142, 184) 100%);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(223, 219, 232) 0%, rgb(156, 142, 184) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#9c8eb8",GradientType=1);
 }
 

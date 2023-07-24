@@ -7,8 +7,6 @@ let blue = document.querySelector('.blue')
 let green = document.querySelector('.green')
 let grey = document.querySelector('.grey');
 
-
-
 let colors = [
     [beige, 'beige'], 
     [orange, 'orange'], 
@@ -23,7 +21,7 @@ let colors = [
 colors.forEach(origin=>{
     origin[0].addEventListener('click', ()=>{
         document.querySelector('.background-gradient').className = `background-gradient ${origin[1]} `
-        
+
     })
 })
 
