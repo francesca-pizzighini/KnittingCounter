@@ -16,12 +16,6 @@ body {
   overflow: hidden;
 }
 
-.color-picker {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .color {
   border-radius: 100%;
   width: 70px;
