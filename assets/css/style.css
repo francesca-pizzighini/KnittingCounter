@@ -12,8 +12,7 @@ body {
 }
 
 .background-gradient {
-  height: 100%;
-  overflow: hidden;
+  height: 130dvh;
 }
 
 .color {
@@ -146,6 +145,17 @@ body {
   color: #494850;
 }
 
-.space {
-  height: 600px;
+.prova-btn {
+  padding: 20px 40px;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: white;
+  border: 1px solid white;
+  color: #494850;
+}
+
+.prova-btn:hover {
+  background-color: #494850;
+  color: white;
 }
