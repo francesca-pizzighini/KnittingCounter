@@ -101,7 +101,6 @@ body{
         line-height: 60px;
     }
     .counter-btns{
-        // background-color: aqua;
         width: 200px;
         height: 120px;
         position: relative;
@@ -143,7 +142,8 @@ body{
         font-size: 15px;
         padding: 5px 10px;
     }
-    .btn-half:hover, .btn-one:hover{
+    .btn-half:hover, .btn-one:hover, .reset:hover, .plus:hover, .minus:hover{
         color: $dark;
+        cursor: pointer;
     }
 }
