@@ -97,6 +97,7 @@ body {
 }
 .row-counter .counter-btns .reset, .stitch-counter .counter-btns .reset {
   font-size: 14px;
+  line-height: 14px;
   height: 30px;
   width: 30px;
   position: absolute;
@@ -129,19 +130,4 @@ body {
 }
 .row-counter .btn-half:hover, .row-counter .btn-one:hover, .stitch-counter .btn-half:hover, .stitch-counter .btn-one:hover {
   color: #494850;
-}
-
-.prova-btn {
-  padding: 20px 40px;
-  text-align: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: white;
-  border: 1px solid white;
-  color: #494850;
-}
-
-.prova-btn:hover {
-  background-color: #494850;
-  color: white;
 }
