@@ -30,6 +30,7 @@ colors.forEach(origin=>{
 
 
 
+
 //row counter
 let countlabel1 = document.getElementById('count1')
 let resetRow = document.getElementById('reset1');
@@ -96,9 +97,6 @@ btnOne.addEventListener('click', ()=>{
 });
 
 
-
-
-
 //counter Stitches
 let countlabel2 = document.getElementById('count2')
 let resetStc = document.getElementById('reset2');
@@ -128,3 +126,4 @@ function counter2() {
     }
 }
 counter2();
+
