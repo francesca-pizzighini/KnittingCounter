@@ -26,5 +26,49 @@ colors.forEach(origin=>{
 });
 
 
+let btnHalf = document.querySelector('.btn-half');
+let btnOne = document.querySelector('.btn-one');
 
-  
+btnHalf.onclick = function () {
+    alert('half');
+}
+btnOne.onclick = function () {
+    alert('one');
+}
+
+
+
+let resetRow = document.getElementById('reset1');
+let plusRow = document.getElementById('plus1');
+let minusRow = document.getElementById('minus1');
+
+resetRow.onclick = function () {
+    alert('reset');
+}
+plusRow.onclick = function () {
+    alert('plus');
+}
+minusRow.onclick = function () {
+    alert('minus');
+}
+
+
+
+
+
+
+
+
+let resetStc = document.getElementById('reset2');
+let plusStc = document.getElementById('plus2');
+let minusStc = document.getElementById('minus2');
+
+resetStc.onclick = function (){
+    alert('reset');
+}
+plusStc.onclick = function (){
+    alert('plus');
+}
+minusStc.onclick = function (){
+    alert('minus');
+}
