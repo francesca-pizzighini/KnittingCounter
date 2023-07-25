@@ -107,6 +107,7 @@ body{
 
         .reset, .minus, .plus{
             border-radius: 100%;
+            z-index: 9;
         }
         .reset{
             font-size: 14px;

@@ -94,6 +94,7 @@ body {
 }
 .row-counter .counter-btns .reset, .row-counter .counter-btns .minus, .row-counter .counter-btns .plus, .stitch-counter .counter-btns .reset, .stitch-counter .counter-btns .minus, .stitch-counter .counter-btns .plus {
   border-radius: 100%;
+  z-index: 9;
 }
 .row-counter .counter-btns .reset, .stitch-counter .counter-btns .reset {
   font-size: 14px;
