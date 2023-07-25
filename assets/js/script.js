@@ -1,3 +1,71 @@
+//create buttons
+let rowDiv = document.getElementById('row-div');
+function createRowCounter(){
+    let span = document.createElement('span');
+    span.setAttribute('id', 'count1');
+    rowDiv.appendChild(span);
+
+    let divbtns = document.createElement('div');
+    divbtns.className = 'counter-btns';
+    rowDiv.appendChild(divbtns);
+
+    let divreset = document.createElement('div');
+    divreset.setAttribute('id', 'reset1');
+    divreset.className = 'reset d-flex align-items-center justify-content-center btn btn-outline-light';
+    let divresettext = document.createTextNode('↺')
+    divbtns.appendChild(divreset);
+    divreset.appendChild(divresettext);
+
+    let divminus = document.createElement('div');
+    divminus.setAttribute('id', 'minus1');
+    divminus.className = 'minus d-flex align-items-center justify-content-center btn btn-outline-light disable-dbl-tap-zoom';
+    let divminustext = document.createTextNode('-')
+    divbtns.appendChild(divminus);
+    divminus.appendChild(divminustext);
+
+    let divplus = document.createElement('div');
+    divplus.setAttribute('id', 'plus1');
+    divplus.className = 'plus d-flex align-items-center justify-content-center btn btn-outline-light disable-dbl-tap-zoom';
+    let divplustext = document.createTextNode('+')
+    divbtns.appendChild(divplus);
+    divplus.appendChild(divplustext);
+}
+
+let stitchDiv = document.getElementById('stitch-div');
+function createStitchCounter() {
+    let span = document.createElement('span');
+    span.setAttribute('id', 'count2');
+    stitchDiv.appendChild(span);
+
+    let divbtns = document.createElement('div');
+    divbtns.className = 'counter-btns';
+    stitchDiv.appendChild(divbtns);
+
+    let divreset = document.createElement('div');
+    divreset.setAttribute('id', 'reset2');
+    divreset.className = 'reset d-flex align-items-center justify-content-center btn btn-outline-light';
+    let divresettext = document.createTextNode('↺')
+    divbtns.appendChild(divreset);
+    divreset.appendChild(divresettext);
+
+    let divminus = document.createElement('div');
+    divminus.setAttribute('id', 'minus2');
+    divminus.className = 'minus d-flex align-items-center justify-content-center btn btn-outline-light disable-dbl-tap-zoom';
+    let divminustext = document.createTextNode('-')
+    divbtns.appendChild(divminus);
+    divminus.appendChild(divminustext);
+
+    let divplus = document.createElement('div');
+    divplus.setAttribute('id', 'plus2');
+    divplus.className = 'plus d-flex align-items-center justify-content-center btn btn-outline-light disable-dbl-tap-zoom';
+    let divplustext = document.createTextNode('+')
+    divbtns.appendChild(divplus);
+    divplus.appendChild(divplustext);
+}
+
+createRowCounter();
+createStitchCounter();
+
 //color changer
 let beige = document.querySelector('.beige');
 let orange = document.querySelector('.orange');
@@ -25,10 +93,6 @@ colors.forEach(origin=>{
         document.querySelector('body').className = `${origin[1]}`;
     });
 });
-
-
-
-
 
 
 //row counter
@@ -60,7 +124,6 @@ function counter1() {
     }
 }
 counter1();
-
 function counterhalf() {
     resetRow.onclick = function () {
         count1 = 0;
@@ -96,7 +159,6 @@ btnOne.addEventListener('click', ()=>{
     counter1();
 });
 
-
 //counter Stitches
 let countlabel2 = document.getElementById('count2')
 let resetStc = document.getElementById('reset2');
@@ -126,4 +188,3 @@ function counter2() {
     }
 }
 counter2();
-
