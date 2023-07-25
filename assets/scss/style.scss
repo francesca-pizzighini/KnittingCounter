@@ -152,4 +152,7 @@ body{
         background-color: white;
         cursor: pointer;
     }
+    .disable-dbl-tap-zoom{
+        touch-action: manipulation;
+    }
 }

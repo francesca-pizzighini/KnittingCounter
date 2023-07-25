@@ -138,3 +138,6 @@ body {
   background-color: white;
   cursor: pointer;
 }
+.row-counter .disable-dbl-tap-zoom, .stitch-counter .disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
