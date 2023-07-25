@@ -1,3 +1,4 @@
+//color changer
 let beige = document.querySelector('.beige');
 let orange = document.querySelector('.orange');
 let red = document.querySelector('.red');
@@ -26,49 +27,104 @@ colors.forEach(origin=>{
 });
 
 
-let btnHalf = document.querySelector('.btn-half');
-let btnOne = document.querySelector('.btn-one');
-
-btnHalf.onclick = function () {
-    alert('half');
-}
-btnOne.onclick = function () {
-    alert('one');
-}
 
 
 
+//row counter
+let countlabel1 = document.getElementById('count1')
 let resetRow = document.getElementById('reset1');
 let plusRow = document.getElementById('plus1');
 let minusRow = document.getElementById('minus1');
 
-resetRow.onclick = function () {
-    alert('reset');
+let count1 = 0
+countlabel1.innerHTML = 0
+
+function counter1() {
+    resetRow.onclick = function () {
+        count1 = 0;
+        countlabel1.innerHTML = count1
+    }
+    plusRow.onclick = function () {
+        count1 += 1;
+        countlabel1.innerHTML = count1;
+    }
+    minusRow.onclick = function () {
+        count1 -= 1;
+        countlabel1.innerHTML = count1;
+
+        if (count1 < 0) {
+            count1 = 0
+            countlabel1.innerHTML = count1;
+        }
+    }
 }
-plusRow.onclick = function () {
-    alert('plus');
+counter1();
+
+function counterhalf() {
+    resetRow.onclick = function () {
+        count1 = 0;
+        countlabel1.innerHTML = count1
+    }
+    plusRow.onclick = function () {
+        count1 += 0.5;
+        countlabel1.innerHTML = count1;
+    }
+    minusRow.onclick = function () {
+        count1 -= 0.5;
+        countlabel1.innerHTML = count1;
+
+        if (count1 < 0) {
+            count1 = 0
+            countlabel1.innerHTML = count1;
+        }
+    }
 }
-minusRow.onclick = function () {
-    alert('minus');
-}
+
+//different options for row counter
+let btnHalf = document.querySelector('.btn-half');
+let btnOne = document.querySelector('.btn-one');
+
+btnHalf.addEventListener('click', ()=>{
+    btnHalf.className = 'btn btn-outline-light btn-half pressed';
+    btnOne.className = 'btn btn-outline-light btn-one';
+    counterhalf();
+});
+btnOne.addEventListener('click', ()=>{
+    btnHalf.className = 'btn btn-outline-light btn-half';
+    btnOne.className = 'btn btn-outline-light btn-one pressed';
+    counter1();
+});
 
 
 
 
 
-
-
-
+//counter Stitches
+let countlabel2 = document.getElementById('count2')
 let resetStc = document.getElementById('reset2');
 let plusStc = document.getElementById('plus2');
 let minusStc = document.getElementById('minus2');
 
-resetStc.onclick = function (){
-    alert('reset');
+let count2 = 0
+countlabel2.innerHTML = 0
+
+function counter2() {
+    resetStc.onclick = function () {
+        count2 = 0;
+        countlabel2.innerHTML = count2
+    }
+    plusStc.onclick = function () {
+        count2 += 1;
+        countlabel2.innerHTML = count2;
+    }
+    minusStc.onclick = function () {
+        count2 -= 1;
+        countlabel2.innerHTML = count2;
+
+        if (count2 < 0) {
+            count2 = 0
+            countlabel2.innerHTML = count2;
+        }
+    }
 }
-plusStc.onclick = function (){
-    alert('plus');
-}
-minusStc.onclick = function (){
-    alert('minus');
-}
+counter2();

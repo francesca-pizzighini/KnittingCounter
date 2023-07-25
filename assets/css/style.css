@@ -133,3 +133,8 @@ body {
   color: #494850;
   cursor: pointer;
 }
+.row-counter .pressed, .stitch-counter .pressed {
+  color: #494850;
+  background-color: white;
+  cursor: pointer;
+}

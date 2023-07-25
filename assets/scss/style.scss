@@ -147,4 +147,9 @@ body{
         color: $dark;
         cursor: pointer;
     }
+    .pressed{
+        color: $dark;
+        background-color: white;
+        cursor: pointer;
+    }
 }
