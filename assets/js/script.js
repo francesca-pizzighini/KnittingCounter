@@ -1,70 +1,42 @@
 //create buttons
 let rowDiv = document.getElementById('row-div');
-function createRowCounter(){
-    let span = document.createElement('span');
-    span.setAttribute('id', 'count1');
-    rowDiv.appendChild(span);
-
-    let divbtns = document.createElement('div');
-    divbtns.className = 'counter-btns';
-    rowDiv.appendChild(divbtns);
-
-    let divreset = document.createElement('div');
-    divreset.setAttribute('id', 'reset1');
-    divreset.className = 'reset d-flex align-items-center justify-content-center btn btn-outline-light';
-    let divresettext = document.createTextNode('↺')
-    divbtns.appendChild(divreset);
-    divreset.appendChild(divresettext);
-
-    let divminus = document.createElement('div');
-    divminus.setAttribute('id', 'minus1');
-    divminus.className = 'minus d-flex align-items-center justify-content-center btn btn-outline-light disable-dbl-tap-zoom';
-    let divminustext = document.createTextNode('-')
-    divbtns.appendChild(divminus);
-    divminus.appendChild(divminustext);
-
-    let divplus = document.createElement('div');
-    divplus.setAttribute('id', 'plus1');
-    divplus.className = 'plus d-flex align-items-center justify-content-center btn btn-outline-light disable-dbl-tap-zoom';
-    let divplustext = document.createTextNode('+')
-    divbtns.appendChild(divplus);
-    divplus.appendChild(divplustext);
-}
-
 let stitchDiv = document.getElementById('stitch-div');
-function createStitchCounter() {
+
+let counterCreation = [
+    [rowDiv, 'count1', 'reset1', 'minus1', 'plus1'],
+    [stitchDiv, 'count2', 'reset2', 'minus2', 'plus2'],
+]
+
+counterCreation.forEach(one=>{
     let span = document.createElement('span');
-    span.setAttribute('id', 'count2');
-    stitchDiv.appendChild(span);
+    span.setAttribute('id', `${one[1]}`);
+    one[0].appendChild(span);
 
     let divbtns = document.createElement('div');
     divbtns.className = 'counter-btns';
-    stitchDiv.appendChild(divbtns);
+    one[0].appendChild(divbtns);
 
     let divreset = document.createElement('div');
-    divreset.setAttribute('id', 'reset2');
+    divreset.setAttribute('id', `${one[2]}`);
     divreset.className = 'reset d-flex align-items-center justify-content-center btn btn-outline-light';
     let divresettext = document.createTextNode('↺')
     divbtns.appendChild(divreset);
     divreset.appendChild(divresettext);
 
     let divminus = document.createElement('div');
-    divminus.setAttribute('id', 'minus2');
+    divminus.setAttribute('id', `${one[3]}`);
     divminus.className = 'minus d-flex align-items-center justify-content-center btn btn-outline-light disable-dbl-tap-zoom';
     let divminustext = document.createTextNode('-')
     divbtns.appendChild(divminus);
     divminus.appendChild(divminustext);
 
     let divplus = document.createElement('div');
-    divplus.setAttribute('id', 'plus2');
+    divplus.setAttribute('id', `${one[4]}`);
     divplus.className = 'plus d-flex align-items-center justify-content-center btn btn-outline-light disable-dbl-tap-zoom';
     let divplustext = document.createTextNode('+')
     divbtns.appendChild(divplus);
     divplus.appendChild(divplustext);
-}
-
-createRowCounter();
-createStitchCounter();
+})
 
 //color changer
 let beige = document.querySelector('.beige');
