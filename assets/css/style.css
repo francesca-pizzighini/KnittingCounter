@@ -94,20 +94,6 @@ body {
 }
 .row-counter .counter-btns .reset, .row-counter .counter-btns .minus, .row-counter .counter-btns .plus, .stitch-counter .counter-btns .reset, .stitch-counter .counter-btns .minus, .stitch-counter .counter-btns .plus {
   border-radius: 100%;
-  border: 1px solid white;
-  color: white;
-}
-.row-counter .counter-btns .reset:hover, .row-counter .counter-btns .plus:hover, .row-counter .counter-btns .minus:hover, .stitch-counter .counter-btns .reset:hover, .stitch-counter .counter-btns .plus:hover, .stitch-counter .counter-btns .minus:hover {
-  background-color: white;
-  color: #494850;
-}
-.row-counter .counter-btns .reset:focus, .row-counter .counter-btns .plus:focus, .row-counter .counter-btns .minus:focus, .stitch-counter .counter-btns .reset:focus, .stitch-counter .counter-btns .plus:focus, .stitch-counter .counter-btns .minus:focus {
-  background-color: white;
-  color: #494850;
-}
-.row-counter .counter-btns .reset:active, .row-counter .counter-btns .plus:active, .row-counter .counter-btns .minus:active, .stitch-counter .counter-btns .reset:active, .stitch-counter .counter-btns .plus:active, .stitch-counter .counter-btns .minus:active {
-  background-color: white;
-  color: #494850;
 }
 .row-counter .counter-btns .reset, .stitch-counter .counter-btns .reset {
   font-size: 14px;

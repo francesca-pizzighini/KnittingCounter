@@ -108,26 +108,11 @@ body{
 
         .reset, .minus, .plus{
             border-radius: 100%;
-            border: 1px solid white;
-            color: white;
-        }
-        .reset:hover, .plus:hover, .minus:hover{
-            background-color: white;
-            color: $dark;
-        }
-        .reset:focus, .plus:focus, .minus:focus{
-            background-color: white;
-            color: $dark;
-        }
-        .reset:active, .plus:active, .minus:active{
-            background-color: white;
-            color: $dark;
         }
         .reset{
             font-size: 14px;
             height: 30px;
             width: 30px;
-            // background-color: grey;
             position: absolute;
             left: 60px;
             top:10px
@@ -136,7 +121,6 @@ body{
             font-size: 40px;
             height: 60px;
             width: 60px;
-            // background-color: red;
             position: absolute;
             bottom:10px;
             left:10px;
@@ -145,7 +129,6 @@ body{
             font-size: 50px;
             height: 100px;
             width: 100px;
-            // background-color: blue;
             position: absolute;
             bottom: 0px;
             right:0px
