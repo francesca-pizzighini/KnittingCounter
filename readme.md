@@ -40,6 +40,7 @@ This counter was designed and developed as the final project to complete the uni
 ### Prerequisite
 The assignment to complete this project was pretty simple: creating an application that allow the user to decrement or increment a value on screen. 
 When the user starts the page need to see a button plus to increase, a button minus to decrease and the number 0 as the value of the counter.
+<br>
 Additional features are welcome.
 
 ### Technical requisite
@@ -52,10 +53,11 @@ Additional features are welcome.
 
 
 ## The Idea
-When I started thinking about the project I decided that I didn't want it to be anonymous or unused in the future. After thinking about how I use counters in my life I decided to build something that I could use in the future.
+When I started thinking about the project I decided that I didn't want it to be anonymous or unused in the future. After thinking about how I use counters in my life I decided to build something that I could find helpful in the future.
 
 ### Why knitting
 In the last year I developed a huge passion on knitting and i discovered how important is keeping count (literallly) of your work. I didn't need anything complex for my work, but I couldn't find an application that truly satisfy me with the working and the design.
+<br>
 So I made it myself.
 
 The first thing I needed were 2 counters, one for rows and the other for stitches.
@@ -67,9 +69,9 @@ The last thing I added is the local storage: when you knit something rarely you 
 ### Design inspiration
 Taking ispiration for design was essential for my work since I'm not very good creating new ones.
 The main inspiration for me was the [application](https://apps.apple.com/us/app/counter/id478557426) I typically use on my phone.
-Looking at this application made me decide to add a color changer at the top of the screen. It's a little thing but I personally love when i can personalize a little my interface, so i selected a bunch of colors for the users to pick.
+Looking at this application made me decide to add a color changer at the top of the screen. It's a little thing but I personally love when I can personalize a little my interface, so I selected a bunch of colors for the users to pick.
 
-Other than that I scrolled pinterest searching counters design but i couldn't find anything noteworty so i just picked some colors or elements.
+Other than that I scrolled pinterest searching counters design but I couldn't find anything noteworty so I just picked some colors or elements here and there.
 <p align="right"><a href="#top">return to the top</a></p>
 
 
@@ -87,9 +89,9 @@ To develope this website I used:
 ## Contacts
 <a href= "https://francesca-pizzighini.github.io/Portfolio/projects.html">Francesca Pizzighini</a>
 
-<a href= "https://github.com/francesca-pizzighini">GitHub Repository</a>
-
 <a href= "https://www.linkedin.com/in/francesca-pizzighini-20b4061b0">LinkedIn Profile</a>
+
+Visit [my GitHub Repository](https://github.com/francesca-pizzighini) to see all my works!
 
 <p align="right"><a href="#top">return to the top</a></p>
 
