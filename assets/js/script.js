@@ -68,30 +68,30 @@ colors.forEach(origin=>{
 
 
 //row counter
-let countlabel1 = document.getElementById('count1')
+let countLabel1 = document.getElementById('count1')
 let resetRow = document.getElementById('reset1');
 let plusRow = document.getElementById('plus1');
 let minusRow = document.getElementById('minus1');
 
 let count1 = 0
-countlabel1.innerHTML = 0
+countLabel1.innerHTML = 0
 
 function counter1() {
     resetRow.onclick = function () {
         count1 = 0;
-        countlabel1.innerHTML = count1
+        countLabel1.innerHTML = count1
     }
     plusRow.onclick = function () {
         count1 += 1;
-        countlabel1.innerHTML = count1;
+        countLabel1.innerHTML = count1;
     }
     minusRow.onclick = function () {
         count1 -= 1;
-        countlabel1.innerHTML = count1;
+        countLabel1.innerHTML = count1;
 
         if (count1 < 0) {
             count1 = 0
-            countlabel1.innerHTML = count1;
+            countLabel1.innerHTML = count1;
         }
     }
 }
@@ -99,19 +99,19 @@ counter1();
 function counterhalf() {
     resetRow.onclick = function () {
         count1 = 0;
-        countlabel1.innerHTML = count1
+        countLabel1.innerHTML = count1
     }
     plusRow.onclick = function () {
         count1 += 0.5;
-        countlabel1.innerHTML = count1;
+        countLabel1.innerHTML = count1;
     }
     minusRow.onclick = function () {
         count1 -= 0.5;
-        countlabel1.innerHTML = count1;
+        countLabel1.innerHTML = count1;
 
         if (count1 < 0) {
             count1 = 0
-            countlabel1.innerHTML = count1;
+            countLabel1.innerHTML = count1;
         }
     }
 }
@@ -132,30 +132,30 @@ btnOne.addEventListener('click', ()=>{
 });
 
 //counter Stitches
-let countlabel2 = document.getElementById('count2')
+let countLabel2 = document.getElementById('count2')
 let resetStc = document.getElementById('reset2');
 let plusStc = document.getElementById('plus2');
 let minusStc = document.getElementById('minus2');
 
 let count2 = 0
-countlabel2.innerHTML = 0
+countLabel2.innerHTML = 0
 
 function counter2() {
     resetStc.onclick = function () {
         count2 = 0;
-        countlabel2.innerHTML = count2
+        countLabel2.innerHTML = count2
     }
     plusStc.onclick = function () {
         count2 += 1;
-        countlabel2.innerHTML = count2;
+        countLabel2.innerHTML = count2;
     }
     minusStc.onclick = function () {
         count2 -= 1;
-        countlabel2.innerHTML = count2;
+        countLabel2.innerHTML = count2;
 
         if (count2 < 0) {
             count2 = 0
-            countlabel2.innerHTML = count2;
+            countLabel2.innerHTML = count2;
         }
     }
 }
