@@ -19,21 +19,21 @@ counterCreation.forEach(one=>{
     let divreset = document.createElement('div');
     divreset.setAttribute('id', `${one[2]}`);
     divreset.className = 'reset d-flex align-items-center justify-content-center btn btn-outline-light';
-    let divresettext = document.createTextNode('↺')
+    let divresettext = document.createTextNode('↺');
     divbtns.appendChild(divreset);
     divreset.appendChild(divresettext);
 
     let divminus = document.createElement('div');
     divminus.setAttribute('id', `${one[3]}`);
     divminus.className = 'minus d-flex align-items-center justify-content-center btn btn-outline-light disable-dbl-tap-zoom';
-    let divminustext = document.createTextNode('-')
+    let divminustext = document.createTextNode('-');
     divbtns.appendChild(divminus);
     divminus.appendChild(divminustext);
 
     let divplus = document.createElement('div');
     divplus.setAttribute('id', `${one[4]}`);
     divplus.className = 'plus d-flex align-items-center justify-content-center btn btn-outline-light disable-dbl-tap-zoom';
-    let divplustext = document.createTextNode('+')
+    let divplustext = document.createTextNode('+');
     divbtns.appendChild(divplus);
     divplus.appendChild(divplustext);
 })
@@ -68,30 +68,34 @@ colors.forEach(origin=>{
 
 
 //row counter
-let countLabel1 = document.getElementById('count1')
+let countLabel1 = document.getElementById('count1');
 let resetRow = document.getElementById('reset1');
 let plusRow = document.getElementById('plus1');
 let minusRow = document.getElementById('minus1');
 
-let count1 = 0
-countLabel1.innerHTML = 0
+let count1 = JSON.parse(localStorage.getItem('counter1Value')) || 0;
+countLabel1.innerHTML = count1;
 
 function counter1() {
     resetRow.onclick = function () {
         count1 = 0;
         countLabel1.innerHTML = count1
+        localStorage.setItem('counter1Value', JSON.stringify(count1));
     }
     plusRow.onclick = function () {
         count1 += 1;
         countLabel1.innerHTML = count1;
+        localStorage.setItem('counter1Value', JSON.stringify(count1));
     }
     minusRow.onclick = function () {
         count1 -= 1;
         countLabel1.innerHTML = count1;
+        localStorage.setItem('counter1Value', JSON.stringify(count1));
 
         if (count1 < 0) {
-            count1 = 0
+            count1 = 0;
             countLabel1.innerHTML = count1;
+            localStorage.setItem('counter1Value', JSON.stringify(count1));
         }
     }
 }
@@ -100,21 +104,25 @@ function counterhalf() {
     resetRow.onclick = function () {
         count1 = 0;
         countLabel1.innerHTML = count1
+        localStorage.setItem('counter1Value', JSON.stringify(count1));
     }
     plusRow.onclick = function () {
         count1 += 0.5;
         countLabel1.innerHTML = count1;
+        localStorage.setItem('counter1Value', JSON.stringify(count1));
     }
     minusRow.onclick = function () {
         count1 -= 0.5;
         countLabel1.innerHTML = count1;
+        localStorage.setItem('counter1Value', JSON.stringify(count1));
 
         if (count1 < 0) {
-            count1 = 0
+            count1 = 0;
             countLabel1.innerHTML = count1;
+            localStorage.setItem('counter1Value', JSON.stringify(count1));
         }
     }
-}
+};
 
 //different options for row counter
 let btnHalf = document.querySelector('.btn-half');
@@ -137,25 +145,29 @@ let resetStc = document.getElementById('reset2');
 let plusStc = document.getElementById('plus2');
 let minusStc = document.getElementById('minus2');
 
-let count2 = 0
-countLabel2.innerHTML = 0
+let count2 = JSON.parse(localStorage.getItem('counter2Value')) || 0;
+countLabel2.innerHTML = count2;
 
 function counter2() {
     resetStc.onclick = function () {
         count2 = 0;
-        countLabel2.innerHTML = count2
+        countLabel2.innerHTML = count2;
+        localStorage.setItem('counter2Value', JSON.stringify(count2));
     }
     plusStc.onclick = function () {
         count2 += 1;
         countLabel2.innerHTML = count2;
+        localStorage.setItem('counter2Value', JSON.stringify(count2));
     }
     minusStc.onclick = function () {
         count2 -= 1;
         countLabel2.innerHTML = count2;
+        localStorage.setItem('counter2Value', JSON.stringify(count2));
 
         if (count2 < 0) {
-            count2 = 0
+            count2 = 0;
             countLabel2.innerHTML = count2;
+            localStorage.setItem('counter2Value', JSON.stringify(count2));
         }
     }
 }
