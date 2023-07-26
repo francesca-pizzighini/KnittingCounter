@@ -62,7 +62,7 @@ The first thing I needed were 2 counters, one for rows and the other for stitche
 I needed that the row counter could add or remove not only one, but 0,5 so i can count every needle done.
 And I wanted a minimal but good design.
 
-### Design Ispiration
+### Design Inspiration
 Taking ispiration for design was essential for my work since I'm not very good creating new ones.
 The main inspiration for me was the <a src="https://apps.apple.com/us/app/counter/id478557426">application</a> I typically use on my phone.
 Looking at this application made me decide to add a color changer at the top of the screen. It's a little thing but I personally love when i can personalize a little my interface, so i selected a bunch of colors for the users to pick.
