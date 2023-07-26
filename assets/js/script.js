@@ -6,7 +6,6 @@ let counterCreation = [
     [rowDiv, 'count1', 'reset1', 'minus1', 'plus1'],
     [stitchDiv, 'count2', 'reset2', 'minus2', 'plus2'],
 ]
-
 counterCreation.forEach(one=>{
     let span = document.createElement('span');
     span.setAttribute('id', `${one[1]}`);
@@ -44,8 +43,8 @@ let orange = document.querySelector('.orange');
 let red = document.querySelector('.red');
 let pink = document.querySelector('.pink');
 let lavender = document.querySelector('.lavender');
-let blue = document.querySelector('.blue')
-let green = document.querySelector('.green')
+let blue = document.querySelector('.blue');
+let green = document.querySelector('.green');
 let grey = document.querySelector('.grey');
 
 let colors = [
@@ -58,7 +57,6 @@ let colors = [
     [green, 'green'],
     [grey, 'grey'],
 ];
-
 colors.forEach(origin=>{
     origin[0].addEventListener('click', ()=>{
         document.querySelector('.background-gradient').className = `background-gradient ${origin[1]}`;
@@ -79,7 +77,7 @@ countLabel1.innerHTML = count1;
 function counter1() {
     resetRow.onclick = function () {
         count1 = 0;
-        countLabel1.innerHTML = count1
+        countLabel1.innerHTML = count1;
         localStorage.setItem('counter1Value', JSON.stringify(count1));
     }
     plusRow.onclick = function () {
@@ -99,7 +97,6 @@ function counter1() {
         }
     }
 }
-counter1();
 function counterhalf() {
     resetRow.onclick = function () {
         count1 = 0;
@@ -123,6 +120,7 @@ function counterhalf() {
         }
     }
 };
+counterhalf();
 
 //different options for row counter
 let btnHalf = document.querySelector('.btn-half');
@@ -140,7 +138,7 @@ btnOne.addEventListener('click', ()=>{
 });
 
 //counter Stitches
-let countLabel2 = document.getElementById('count2')
+let countLabel2 = document.getElementById('count2');
 let resetStc = document.getElementById('reset2');
 let plusStc = document.getElementById('plus2');
 let minusStc = document.getElementById('minus2');

@@ -62,14 +62,14 @@ The first thing I needed were 2 counters, one for rows and the other for stitche
 I needed that the row counter could add or remove not only one, but 0.5 so i can count every needle done.
 And I wanted a minimal but good design.
 
-The last thing i added is the local storage: when you knit something rarely you are done in one session, so is extremely important that the website keep in memory the last action in the counter. 
+The last thing I added is the local storage: when you knit something rarely you are done in one session, so is extremely important that the website keep in memory the last action in the counter. 
 
 ### Design inspiration
 Taking ispiration for design was essential for my work since I'm not very good creating new ones.
 The main inspiration for me was the <a src="https://apps.apple.com/us/app/counter/id478557426">application</a> I typically use on my phone.
 Looking at this application made me decide to add a color changer at the top of the screen. It's a little thing but I personally love when i can personalize a little my interface, so i selected a bunch of colors for the users to pick.
 
-Other than that i scrolled pinterest searching counters design but i couldn't find anything noteworty so i just picked some colors or elements.
+Other than that I scrolled pinterest searching counters design but i couldn't find anything noteworty so i just picked some colors or elements.
 <p align="right"><a href="#top">return to the top</a></p>
 
 
