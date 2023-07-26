@@ -23,7 +23,7 @@ Or continue reading about the project <a href= "#the-project">here</a>.
             <a href="#the-idea">The Idea</a>
             <ul>
                 <li><a href="#why-knitting">Why knitting?</a></li>
-                <li><a href="#design-inspration">Design inspiration</a></li>
+                <li><a href="#design-inspiration">Design inspiration</a></li>
             </ul>
         </li>
     <!--  -->
@@ -59,8 +59,10 @@ In the last year I developed a huge passion on knitting and i discovered how imp
 So I made it myself.
 
 The first thing I needed were 2 counters, one for rows and the other for stitches.
-I needed that the row counter could add or remove not only one, but 0,5 so i can count every needle done.
+I needed that the row counter could add or remove not only one, but 0.5 so i can count every needle done.
 And I wanted a minimal but good design.
+
+The last thing i added is the local storage: when you knit something rarely you are done in one session, so is extremely important that the website keep in memory the last action in the counter. 
 
 ### Design inspiration
 Taking ispiration for design was essential for my work since I'm not very good creating new ones.
