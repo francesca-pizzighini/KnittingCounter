@@ -4,7 +4,7 @@
 # Knitting Counter
 Try the counter <a href= "https://francesca-pizzighini.github.io/KnittingCounter/">here</a>.
 <br>
-Or continue reading about the prokect <a href= "#the-project">here</a>.
+Or continue reading about the project <a href= "#the-project">here</a>.
 
 <img src="assets/img/project-screenshot.png" alt="this image is a screenshot of the website">
 
@@ -52,7 +52,7 @@ Additional features are welcome.
 
 
 ## The Idea
-When I started thinking about the project I decided that I didn't want it to be anonymous or worthless. After thinking about how I use counters in my life I decided to build something I could use in the future.
+When I started thinking about the project I decided that I didn't want it to be anonymous or worthless. After thinking about how I use counters in my life I decided to build something that I could use in the future.
 
 ### Why knitting
 In the last year I developed a huge passion on knitting and i discovered how important is keeping count (literallly) of your work. I didn't need anything complex for my work, but I couldn't find an application that truly satisfy me with the working and the design.
@@ -64,8 +64,10 @@ And I wanted a minimal but good design.
 
 ### Design Ispiration
 Taking ispiration for design was essential for my work since I'm not very good creating new ones.
-The main inspiration for me was the <a src="https://apps.apple.com/us/app/counter/id478557426">application</a> I typically use on my phone. 
-Other than that i scrolled pinterest searching counters design but i could't find anything noteworty so i just pisked some colors or elements.
+The main inspiration for me was the <a src="https://apps.apple.com/us/app/counter/id478557426">application</a> I typically use on my phone.
+Looking at this application made me decide to add a color changer at the top of the screen. It's a little thing but I personally love when i can personalize a little my interface, so i selected a bunch of colors for the users to pick.
+
+Other than that i scrolled pinterest searching counters design but i couldn't find anything noteworty so i just picked some colors or elements.
 <p align="right"><a href="#top">return to the top</a></p>
 
 
