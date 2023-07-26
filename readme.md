@@ -35,7 +35,7 @@ Or continue reading about the project <a href= "#the-project">here</a>.
 </details>
 
 ## The Project
-This counter was designed and developed as the final project to complete the unit "Javascript Basics" in the Front-End Developer Master course offered by <a src="https://www.start2impact.it">Start2Impact University</a>.
+This counter was designed and developed as the final project to complete the unit "Javascript Basics" in the Front-End Developer Master course offered by [Start2Impact University](https://www.start2impact.it).
 
 ### Prerequisite
 The assignment to complete this project was pretty simple: creating an application that allow the user to decrement or increment a value on screen. 
@@ -52,7 +52,7 @@ Additional features are welcome.
 
 
 ## The Idea
-When I started thinking about the project I decided that I didn't want it to be anonymous or worthless. After thinking about how I use counters in my life I decided to build something that I could use in the future.
+When I started thinking about the project I decided that I didn't want it to be anonymous or unused in the future. After thinking about how I use counters in my life I decided to build something that I could use in the future.
 
 ### Why knitting
 In the last year I developed a huge passion on knitting and i discovered how important is keeping count (literallly) of your work. I didn't need anything complex for my work, but I couldn't find an application that truly satisfy me with the working and the design.
@@ -66,7 +66,7 @@ The last thing I added is the local storage: when you knit something rarely you 
 
 ### Design inspiration
 Taking ispiration for design was essential for my work since I'm not very good creating new ones.
-The main inspiration for me was the <a src="https://apps.apple.com/us/app/counter/id478557426">application</a> I typically use on my phone.
+The main inspiration for me was the [application](https://apps.apple.com/us/app/counter/id478557426) I typically use on my phone.
 Looking at this application made me decide to add a color changer at the top of the screen. It's a little thing but I personally love when i can personalize a little my interface, so i selected a bunch of colors for the users to pick.
 
 Other than that I scrolled pinterest searching counters design but i couldn't find anything noteworty so i just picked some colors or elements.
