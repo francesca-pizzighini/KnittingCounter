@@ -91,7 +91,6 @@ To develope this website I used:
 
 <a href= "https://www.linkedin.com/in/francesca-pizzighini-20b4061b0">LinkedIn Profile</a>
 
-Visit [my GitHub Repository](https://github.com/francesca-pizzighini) to see all my works!
+Visit my GitHub Repository [here](https://github.com/francesca-pizzighini) to see all my works.
 
 <p align="right"><a href="#top">return to the top</a></p>
-
