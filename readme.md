@@ -2,7 +2,7 @@
 <a id="top"></a>
 
 # Knitting Counter
-Try the counter <a href= "https://francesca-pizzighini.github.io/KnittingCounter/">here</a>.
+Try the counter <a href= "https://francesca-pizzighini.github.io/KnittingCounter/">here</a>.<br>
 Or continue reading about the prokect <a href= "#the-project">here</a>.
 
 <img src="assets/img/project-screenshot.png" alt="this image is a screenshot of the website">
@@ -37,7 +37,7 @@ Or continue reading about the prokect <a href= "#the-project">here</a>.
 ## The Project
 This counter was designed and developed as the final project to complete the unit "Javascript Basics" in the Front-End Developer Master course offered by <a src="https://www.start2impact.it">Start2Impact University</a>.
 
-<p text-align="right"><a href="#top">return to the top</a></p>
+<p align="right"><a href="#top">return to the top</a></p>
 
 ### Prerequisite
 The assignment to complete this porject was pretty simple: creating an application that allow the user to decrement or increment a value on screen. 
