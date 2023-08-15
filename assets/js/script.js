@@ -3,39 +3,40 @@ let rowDiv = document.getElementById('row-div');
 let stitchDiv = document.getElementById('stitch-div');
 
 let counterCreation = [
-    [rowDiv, 'count1', 'reset1', 'minus1', 'plus1'],
-    [stitchDiv, 'count2', 'reset2', 'minus2', 'plus2'],
-]
+    [rowDiv, 'count1', 'counter-wrapper1', 'reset1', 'minus1', 'plus1'],
+    [stitchDiv, 'count2', 'counter-wrapper2', 'reset2', 'minus2', 'plus2'],
+];
 counterCreation.forEach(one=>{
     let span = document.createElement('span');
-    span.setAttribute('id', `${one[1]}`);
-    one[0].appendChild(span);
+    implementElementCharacteristic(span, one[1], ' ', one[0]);
 
     let divbtns = document.createElement('div');
-    divbtns.className = 'counter-btns';
-    one[0].appendChild(divbtns);
+    implementElementCharacteristic(divbtns, one[2], 'counter-btns', one[0]);
 
     let divreset = document.createElement('div');
-    divreset.setAttribute('id', `${one[2]}`);
-    divreset.className = 'reset d-flex align-items-center justify-content-center btn btn-outline-light';
-    let divresettext = document.createTextNode('↺');
-    divbtns.appendChild(divreset);
-    divreset.appendChild(divresettext);
+    let divresettext;
+    implementElementWithTextCharacteristic(divreset, one[3], 'reset d-flex align-items-center justify-content-center btn btn-outline-light', divbtns, divresettext, '↺');
 
     let divminus = document.createElement('div');
-    divminus.setAttribute('id', `${one[3]}`);
-    divminus.className = 'minus d-flex align-items-center justify-content-center btn btn-outline-light disable-dbl-tap-zoom';
-    let divminustext = document.createTextNode('-');
-    divbtns.appendChild(divminus);
-    divminus.appendChild(divminustext);
+    let divminustext;
+    implementElementWithTextCharacteristic(divminus, one[4], 'minus d-flex align-items-center justify-content-center btn btn-outline-light disable-dbl-tap-zoom', divbtns, divminustext, '-');
 
     let divplus = document.createElement('div');
-    divplus.setAttribute('id', `${one[4]}`);
-    divplus.className = 'plus d-flex align-items-center justify-content-center btn btn-outline-light disable-dbl-tap-zoom';
-    let divplustext = document.createTextNode('+');
-    divbtns.appendChild(divplus);
-    divplus.appendChild(divplustext);
-})
+    let divplustext;
+    implementElementWithTextCharacteristic(divplus, one[5], 'plus d-flex align-items-center justify-content-center btn btn-outline-light disable-dbl-tap-zoom', divbtns, divplustext, '+')
+});
+
+function implementElementCharacteristic(nameElement, idName, listOfClasses, externalElement) {
+    nameElement.setAttribute('id', `${idName}`);
+    nameElement.className = `${listOfClasses}`;
+    externalElement.appendChild(nameElement);
+}
+function implementElementWithTextCharacteristic(nameElement, idName, listOfClasses, externalElement, textElement, text) {
+    implementElementCharacteristic(nameElement, idName, listOfClasses, externalElement);
+    textElement = document.createTextNode(`${text}`)
+    nameElement.appendChild(textElement);
+};
+
 
 //color changer
 let beige = document.querySelector('.beige');
@@ -66,6 +67,7 @@ colors.forEach(origin=>{
 
 
 // row counter
+let counterWrapper1 = document.getElementById('counter-wrapper1');
 let countLabel1 = document.getElementById('count1');
 let resetRow = document.getElementById('reset1');
 let plusRow = document.getElementById('plus1');
@@ -75,69 +77,86 @@ let count1 = JSON.parse(localStorage.getItem('counter1Value')) || 0;
 countLabel1.innerHTML = count1;
 
 function counter1() {
-    resetRow.onclick = function () {
-        count1 = 0;
-        countLabel1.innerHTML = count1;
-        localStorage.setItem('counter1Value', JSON.stringify(count1));
-    }
-    plusRow.onclick = function () {
-        count1 += 1;
-        countLabel1.innerHTML = count1;
-        localStorage.setItem('counter1Value', JSON.stringify(count1));
-    }
-    minusRow.onclick = function () {
-        count1 -= 1;
-        countLabel1.innerHTML = count1;
-        localStorage.setItem('counter1Value', JSON.stringify(count1));
+    counterWrapper1.onclick = function(event){
+        let target = event.target;
 
-        if (count1 < 0) {
+        if(target == resetRow){
             count1 = 0;
             countLabel1.innerHTML = count1;
             localStorage.setItem('counter1Value', JSON.stringify(count1));
-        }
-    }
-}
+        }else if (target == plusRow){
+            count1 += 1;
+            countLabel1.innerHTML = count1;
+            localStorage.setItem('counter1Value', JSON.stringify(count1));
+        }else if(target == minusRow){
+            count1 -= 1;
+            countLabel1.innerHTML = count1;
+            localStorage.setItem('counter1Value', JSON.stringify(count1));
+
+            if (count1 < 0) {
+                count1 = 0;
+                countLabel1.innerHTML = count1;
+                localStorage.setItem('counter1Value', JSON.stringify(count1));
+            }
+        }else{
+        };
+    };
+};
 function counterhalf() {
-    resetRow.onclick = function () {
-        count1 = 0;
-        countLabel1.innerHTML = count1
-        localStorage.setItem('counter1Value', JSON.stringify(count1));
-    }
-    plusRow.onclick = function () {
-        count1 += 0.5;
-        countLabel1.innerHTML = count1;
-        localStorage.setItem('counter1Value', JSON.stringify(count1));
-    }
-    minusRow.onclick = function () {
-        count1 -= 0.5;
-        countLabel1.innerHTML = count1;
-        localStorage.setItem('counter1Value', JSON.stringify(count1));
+    counterWrapper1.onclick = function (event) {
+        let target = event.target;
 
-        if (count1 < 0) {
+        if (target == resetRow) {
+            console.log('reset half');
             count1 = 0;
+            countLabel1.innerHTML = count1
+            localStorage.setItem('counter1Value', JSON.stringify(count1));
+        } else if (target == plusRow) {
+            console.log('plus half');
+            count1 += 0.5;
             countLabel1.innerHTML = count1;
             localStorage.setItem('counter1Value', JSON.stringify(count1));
-        }
-    }
+        } else if (target == minusRow) {
+            console.log('minus half');
+            count1 -= 0.5;
+            countLabel1.innerHTML = count1;
+            localStorage.setItem('counter1Value', JSON.stringify(count1));
+
+            if (count1 < 0) {
+                count1 = 0;
+                countLabel1.innerHTML = count1;
+                localStorage.setItem('counter1Value', JSON.stringify(count1));
+            }
+        } else {
+            console.log('else half');
+        };
+    };
 };
 counterhalf();
 
 // different options for row counter
 let btnHalf = document.querySelector('.btn-half');
 let btnOne = document.querySelector('.btn-one');
+let switchingNumberWrapper = document.querySelector('.half-one-wrapper');
 
-btnHalf.addEventListener('click', ()=>{
-    btnHalf.className = 'btn btn-outline-light btn-half pressed';
-    btnOne.className = 'btn btn-outline-light btn-one';
-    counterhalf();
-});
-btnOne.addEventListener('click', ()=>{
-    btnHalf.className = 'btn btn-outline-light btn-half';
-    btnOne.className = 'btn btn-outline-light btn-one pressed';
-    counter1();
-});
+switchingNumberWrapper.onclick = function(event){
+    let target = event.target;
+
+    if(target == btnHalf){
+        btnHalf.className = 'btn btn-outline-light btn-half pressed';
+        btnOne.className = 'btn btn-outline-light btn-one';
+        counterhalf();
+    } else if(target == btnOne){
+        btnHalf.className = 'btn btn-outline-light btn-half';
+        btnOne.className = 'btn btn-outline-light btn-one pressed';
+        counter1();
+    } else{
+
+    }
+}
 
 // counter Stitches
+let counterWrapper2 = document.getElementById('counter-wrapper2');
 let countLabel2 = document.getElementById('count2');
 let resetStc = document.getElementById('reset2');
 let plusStc = document.getElementById('plus2');
@@ -147,36 +166,45 @@ let count2 = JSON.parse(localStorage.getItem('counter2Value')) || 0;
 countLabel2.innerHTML = count2;
 
 function counter2() {
-    resetStc.onclick = function () {
-        count2 = 0;
-        countLabel2.innerHTML = count2;
-        localStorage.setItem('counter2Value', JSON.stringify(count2));
-    }
-    plusStc.onclick = function () {
-        count2 += 1;
-        countLabel2.innerHTML = count2;
-        localStorage.setItem('counter2Value', JSON.stringify(count2));
-    }
-    minusStc.onclick = function () {
-        count2 -= 1;
-        countLabel2.innerHTML = count2;
-        localStorage.setItem('counter2Value', JSON.stringify(count2));
+    counterWrapper2.onclick = function (event) {
+        let target = event.target;
 
-        if (count2 < 0) {
+        if (target == resetStc) {
+            console.log('reset2');
             count2 = 0;
             countLabel2.innerHTML = count2;
             localStorage.setItem('counter2Value', JSON.stringify(count2));
-        }
-    }
-}
+        } else if (target == plusStc) {
+            console.log('plus2');
+            count2 += 1;
+            countLabel2.innerHTML = count2;
+            localStorage.setItem('counter2Value', JSON.stringify(count2));
+        } else if (target == minusStc) {
+            console.log('minus2');
+            count2 -= 1;
+            countLabel2.innerHTML = count2;
+            localStorage.setItem('counter2Value', JSON.stringify(count2));
+
+            if (count2 < 0) {
+                count2 = 0;
+                countLabel2.innerHTML = count2;
+                localStorage.setItem('counter2Value', JSON.stringify(count2));
+            }
+        } else {
+            console.log('else2');
+        };
+    };
+};
 counter2();
 
 
 
 
 
-// //codice commentato non funzionante per i counter
-// //row
+
+// // codice commentato non funzionante
+// // row counter
+// let counterWrapper1 = document.getElementById('counter-wrapper1');
 // let countLabel1 = document.getElementById('count1');
 // let resetRow = document.getElementById('reset1');
 // let plusRow = document.getElementById('plus1');
@@ -185,7 +213,8 @@ counter2();
 // let count1 = JSON.parse(localStorage.getItem('counter1Value')) || 0;
 // countLabel1.innerHTML = count1;
 
-// //stc
+// // counter Stitches
+// let counterWrapper2 = document.getElementById('counter-wrapper2');
 // let countLabel2 = document.getElementById('count2');
 // let resetStc = document.getElementById('reset2');
 // let plusStc = document.getElementById('plus2');
@@ -194,54 +223,54 @@ counter2();
 // let count2 = JSON.parse(localStorage.getItem('counter2Value')) || 0;
 // countLabel2.innerHTML = count2;
 
-// //row option
-// let btnHalf = document.querySelector('.btn-half');
-// let btnOne = document.querySelector('.btn-one');
+// //funzione counter
+// function counter(counterwrapper, reset, plus, minus, count, countLabel, localStoragename, value) {
+//     counterwrapper.onclick = function (event) {
+//         let target = event.target;
 
-// //data gathered
-// let countersData = [
-//     [countLabel1, resetRow, plusRow, minusRow, count1, 'counter1Value'],
-//     [countLabel2, resetStc, plusStc, minusStc, count2, 'counter2Value'],
-//     1,
-//     0.5,
-// ];
-// //function for all counters
-// function counter(countLabel, reset, plus, minus, count, countervalue, number) {
-//     reset.onclick = function () {
-//         count = 0;
-//         countLabel.innerHTML = count;
-//         localStorage.setItem(countervalue, JSON.stringify(count));
-//     }
-//     plus.onclick = function () {
-//         count += number;
-//         countLabel.innerHTML = count;
-//         localStorage.setItem(countervalue, JSON.stringify(count));
-//     }
-//     minus.onclick = function () {
-//         count -= number;
-//         countLabel.innerHTML = count;
-//         localStorage.setItem(countervalue, JSON.stringify(count));
-
-//         if (count < 0) {
+//         if (target == reset) {
 //             count = 0;
 //             countLabel.innerHTML = count;
-//             localStorage.setItem(countervalue, JSON.stringify(count));
+//             localStorage.setItem(`${localStoragename}`, JSON.stringify(count));
+//         } else if (target == plus) {
+//             count += value;
+//             countLabel.innerHTML = count;
+//             localStorage.setItem(`${localStoragename}`, JSON.stringify(count));
+//         } else if (target == minus) {
+//             count -= value;
+//             countLabel.innerHTML = count;
+//             localStorage.setItem(`${localStoragename}`, JSON.stringify(count));
+
+//             if (count < 0) {
+//                 count = 0;
+//                 countLabel.innerHTML = count;
+//                 localStorage.setItem(`${localStoragename}`, JSON.stringify(count));
+//             }
+//         } else {
+
 //         }
 //     }
 // }
+// //counter row +1
+// // counter(counterWrapper1, resetRow, plusRow, minusRow, count1, countLabel1, 'counter1Value', 1);
+// //counter row +0.5
+// counter(counterWrapper1, resetRow, plusRow, minusRow, count1, countLabel1, 'counter1Value', 0.5);
 
-// // function for row, standard 0.5
-// counter(countersData[0][0], countersData[0][1], countersData[0][2], countersData[0][3], countersData[0][4], countersData[0][5], countersData[3]);
-// //option row
+
+// // different options for row counter
+// let btnHalf = document.querySelector('.btn-half');
+// let btnOne = document.querySelector('.btn-one');
+
 // btnHalf.addEventListener('click', () => {
 //     btnHalf.className = 'btn btn-outline-light btn-half pressed';
 //     btnOne.className = 'btn btn-outline-light btn-one';
-//     counter(countersData[0][0], countersData[0][1], countersData[0][2], countersData[0][3], countersData[0][4], countersData[0][5], countersData[3]);
+//     counter(counterWrapper1, resetRow, plusRow, minusRow, count1, countLabel1, 'counter1Value', 0.5); //counter row +0.5
 // });
 // btnOne.addEventListener('click', () => {
 //     btnHalf.className = 'btn btn-outline-light btn-half';
 //     btnOne.className = 'btn btn-outline-light btn-one pressed';
-//     counter(countersData[0][0], countersData[0][1], countersData[0][2], countersData[0][3], countersData[0][4], countersData[0][5], countersData[2]);
+//     counter(counterWrapper1, resetRow, plusRow, minusRow, count1, countLabel1, 'counter1Value', 1); //counter row +1
 // });
-// //function for stc
-// counter(countersData[1][0], countersData[1][1], countersData[1][2], countersData[1][3], countersData[1][4], countersData[1][5], countersData[2]);
+
+// //counter stc
+// counter(counterWrapper2, resetStc, plusStc, minusStc, count2, countLabel2, 'counter2Value', 1);
