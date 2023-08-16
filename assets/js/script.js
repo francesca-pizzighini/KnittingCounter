@@ -107,17 +107,14 @@ function counterhalf() {
         let target = event.target;
 
         if (target == resetRow) {
-            console.log('reset half');
             count1 = 0;
             countLabel1.innerHTML = count1
             localStorage.setItem('counter1Value', JSON.stringify(count1));
         } else if (target == plusRow) {
-            console.log('plus half');
             count1 += 0.5;
             countLabel1.innerHTML = count1;
             localStorage.setItem('counter1Value', JSON.stringify(count1));
         } else if (target == minusRow) {
-            console.log('minus half');
             count1 -= 0.5;
             countLabel1.innerHTML = count1;
             localStorage.setItem('counter1Value', JSON.stringify(count1));
@@ -128,7 +125,6 @@ function counterhalf() {
                 localStorage.setItem('counter1Value', JSON.stringify(count1));
             }
         } else {
-            console.log('else half');
         };
     };
 };
@@ -170,17 +166,14 @@ function counter2() {
         let target = event.target;
 
         if (target == resetStc) {
-            console.log('reset2');
             count2 = 0;
             countLabel2.innerHTML = count2;
             localStorage.setItem('counter2Value', JSON.stringify(count2));
         } else if (target == plusStc) {
-            console.log('plus2');
             count2 += 1;
             countLabel2.innerHTML = count2;
             localStorage.setItem('counter2Value', JSON.stringify(count2));
         } else if (target == minusStc) {
-            console.log('minus2');
             count2 -= 1;
             countLabel2.innerHTML = count2;
             localStorage.setItem('counter2Value', JSON.stringify(count2));
@@ -191,7 +184,6 @@ function counter2() {
                 localStorage.setItem('counter2Value', JSON.stringify(count2));
             }
         } else {
-            console.log('else2');
         };
     };
 };
@@ -251,8 +243,7 @@ counter2();
 //         }
 //     }
 // }
-// //counter row +1
-// // counter(counterWrapper1, resetRow, plusRow, minusRow, count1, countLabel1, 'counter1Value', 1);
+
 // //counter row +0.5
 // counter(counterWrapper1, resetRow, plusRow, minusRow, count1, countLabel1, 'counter1Value', 0.5);
 
