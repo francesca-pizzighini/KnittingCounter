@@ -76,46 +76,20 @@ let minusRow = document.getElementById('minus1');
 let count1 = JSON.parse(localStorage.getItem('counter1Value')) || 0;
 countLabel1.innerHTML = count1;
 
-function counter1() {
-    counterWrapper1.onclick = function(event){
-        let target = event.target;
-
-        if(target == resetRow){
-            count1 = 0;
-            countLabel1.innerHTML = count1;
-            localStorage.setItem('counter1Value', JSON.stringify(count1));
-        }else if (target == plusRow){
-            count1 += 1;
-            countLabel1.innerHTML = count1;
-            localStorage.setItem('counter1Value', JSON.stringify(count1));
-        }else if(target == minusRow){
-            count1 -= 1;
-            countLabel1.innerHTML = count1;
-            localStorage.setItem('counter1Value', JSON.stringify(count1));
-
-            if (count1 < 0) {
-                count1 = 0;
-                countLabel1.innerHTML = count1;
-                localStorage.setItem('counter1Value', JSON.stringify(count1));
-            }
-        }else{
-        };
-    };
-};
-function counterhalf() {
+function Counter1(n){
     counterWrapper1.onclick = function (event) {
         let target = event.target;
 
         if (target == resetRow) {
             count1 = 0;
-            countLabel1.innerHTML = count1
+            countLabel1.innerHTML = count1;
             localStorage.setItem('counter1Value', JSON.stringify(count1));
         } else if (target == plusRow) {
-            count1 += 0.5;
+            count1 += n;
             countLabel1.innerHTML = count1;
             localStorage.setItem('counter1Value', JSON.stringify(count1));
         } else if (target == minusRow) {
-            count1 -= 0.5;
+            count1 -= n;
             countLabel1.innerHTML = count1;
             localStorage.setItem('counter1Value', JSON.stringify(count1));
 
@@ -124,31 +98,27 @@ function counterhalf() {
                 countLabel1.innerHTML = count1;
                 localStorage.setItem('counter1Value', JSON.stringify(count1));
             }
-        } else {
-        };
+        }
     };
-};
-counterhalf();
+}
+Counter1(0.5);
 
 // different options for row counter
 let btnHalf = document.querySelector('.btn-half');
 let btnOne = document.querySelector('.btn-one');
 let switchingNumberWrapper = document.querySelector('.half-one-wrapper');
 
+let n = 1;
+
 switchingNumberWrapper.onclick = function(event){
     let target = event.target;
+    const isCurrentHalf = target === btnHalf;
 
-    if(target == btnHalf){
-        btnHalf.className = 'btn btn-outline-light btn-half pressed';
-        btnOne.className = 'btn btn-outline-light btn-one';
-        counterhalf();
-    } else if(target == btnOne){
-        btnHalf.className = 'btn btn-outline-light btn-half';
-        btnOne.className = 'btn btn-outline-light btn-one pressed';
-        counter1();
-    } else{
+    btnHalf.classList.toggle('pressed', isCurrentHalf);
+    btnOne.classList.toggle('pressed', !isCurrentHalf);
 
-    }
+    n = isCurrentHalf ? 0.5 : 1;
+    Counter1(n);
 }
 
 // counter Stitches
@@ -183,85 +153,7 @@ function counter2() {
                 countLabel2.innerHTML = count2;
                 localStorage.setItem('counter2Value', JSON.stringify(count2));
             }
-        } else {
-        };
+        }
     };
 };
 counter2();
-
-
-
-
-
-
-// // codice commentato non funzionante
-// // row counter
-// let counterWrapper1 = document.getElementById('counter-wrapper1');
-// let countLabel1 = document.getElementById('count1');
-// let resetRow = document.getElementById('reset1');
-// let plusRow = document.getElementById('plus1');
-// let minusRow = document.getElementById('minus1');
-
-// let count1 = JSON.parse(localStorage.getItem('counter1Value')) || 0;
-// countLabel1.innerHTML = count1;
-
-// // counter Stitches
-// let counterWrapper2 = document.getElementById('counter-wrapper2');
-// let countLabel2 = document.getElementById('count2');
-// let resetStc = document.getElementById('reset2');
-// let plusStc = document.getElementById('plus2');
-// let minusStc = document.getElementById('minus2');
-
-// let count2 = JSON.parse(localStorage.getItem('counter2Value')) || 0;
-// countLabel2.innerHTML = count2;
-
-// //funzione counter
-// function counter(counterwrapper, reset, plus, minus, count, countLabel, localStoragename, value) {
-//     counterwrapper.onclick = function (event) {
-//         let target = event.target;
-
-//         if (target == reset) {
-//             count = 0;
-//             countLabel.innerHTML = count;
-//             localStorage.setItem(`${localStoragename}`, JSON.stringify(count));
-//         } else if (target == plus) {
-//             count += value;
-//             countLabel.innerHTML = count;
-//             localStorage.setItem(`${localStoragename}`, JSON.stringify(count));
-//         } else if (target == minus) {
-//             count -= value;
-//             countLabel.innerHTML = count;
-//             localStorage.setItem(`${localStoragename}`, JSON.stringify(count));
-
-//             if (count < 0) {
-//                 count = 0;
-//                 countLabel.innerHTML = count;
-//                 localStorage.setItem(`${localStoragename}`, JSON.stringify(count));
-//             }
-//         } else {
-
-//         }
-//     }
-// }
-
-// //counter row +0.5
-// counter(counterWrapper1, resetRow, plusRow, minusRow, count1, countLabel1, 'counter1Value', 0.5);
-
-
-// // different options for row counter
-// let btnHalf = document.querySelector('.btn-half');
-// let btnOne = document.querySelector('.btn-one');
-
-// btnHalf.addEventListener('click', () => {
-//     btnHalf.className = 'btn btn-outline-light btn-half pressed';
-//     btnOne.className = 'btn btn-outline-light btn-one';
-//     counter(counterWrapper1, resetRow, plusRow, minusRow, count1, countLabel1, 'counter1Value', 0.5); //counter row +0.5
-// });
-// btnOne.addEventListener('click', () => {
-//     btnHalf.className = 'btn btn-outline-light btn-half';
-//     btnOne.className = 'btn btn-outline-light btn-one pressed';
-//     counter(counterWrapper1, resetRow, plusRow, minusRow, count1, countLabel1, 'counter1Value', 1); //counter row +1
-// });
-
-// //counter stc
-// counter(counterWrapper2, resetStc, plusStc, minusStc, count2, countLabel2, 'counter2Value', 1);
